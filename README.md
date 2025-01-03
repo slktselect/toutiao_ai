@@ -22,4 +22,22 @@
 
 ### 5.1 Docker部署
 
-### 5.2 直接部署
+### 5.2 本地直接部署
+
+```` shell
+# 安装项目依赖
+pip install -r requirements.txt
+
+# 迁移数据
+python manage.py migrate
+# 会创建一个默认用户 用户名: admin 密码: passwd 
+python manage.py load_default_data
+
+# 运行后台
+python manage.py runserver
+````
+
+## 打开后台
+
+http://127.0.0.1:8000/admin/
+
